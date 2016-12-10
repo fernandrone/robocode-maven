@@ -1,6 +1,6 @@
 # Robocode-maven
 
-A framework for easy development and sharing of [Robocode](http://robocode.sourceforge.net/) robots, using [Robocode-docker](https://github.com/fbcbarbosa/robocode-docker).
+A framework for easy development and sharing of [Robocode](http://robocode.sourceforge.net/) robots, setup as a [Maven](https://maven.apache.org/) project and adapted to work with the containerized [Robocode-docker](https://github.com/fbcbarbosa/robocode-docker).
 
 ## Installation
 
@@ -23,7 +23,7 @@ A framework for easy development and sharing of [Robocode](http://robocode.sourc
   $ exec $SHELL
   ```
 
-4. Run Robocode:
+4. Run 'robo' script to launch [Robocode-docker](https://github.com/fbcbarbosa/robocode-docker):
 
   ```
   $ robo
