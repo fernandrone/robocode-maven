@@ -26,9 +26,10 @@ chmod -R 755 $ROBO_CONF $ROBO_BOTS
 docker run -it \
 	-u $(id -u):$(id -g) \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
-	-v $ROBO_ROOT/robocode/config \
+	-v $ROBO_CONF:/robocode/config \
 	-v $ROBO_BOTS:/robocode/robots/robots \
-	-e ROBO_HOME \
+	-e ROBO_ROOT \
+	-e ROBO_CONF \
 	-e ROBO_BOTS \
 	-e DISPLAY \
 	fbcbarbosa/robocode
