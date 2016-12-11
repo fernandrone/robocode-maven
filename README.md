@@ -11,7 +11,7 @@ To build the project you'll require `maven` and to run [Robocode-docker](https:/
 1. Clone Robocode-maven where you want it installed. A good place to pick is `$HOME/robocode` (but you can install it somewhere else).
 
   ```
-  $ git clone https://github.com/fbcbarbosa/robocode-maven/ ~/robocode
+  $ git clone https://github.com/fbcbarbosa/robocode-maven.git ~/robocode
   ```
 
 2. Define the environment variable `ROBO_ROOT` to point to the path where the repo is cloned and add `$ROBO_ROOT` to your $PATH for access to the pyenv command-line utility.
