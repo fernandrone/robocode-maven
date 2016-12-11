@@ -14,7 +14,7 @@ To build the project you'll require `maven` and to run [Robocode-docker](https:/
   $ git clone https://github.com/fbcbarbosa/robocode-maven.git ~/robocode
   ```
 
-2. Define the environment variable `ROBO_ROOT` to point to the path where the repo is cloned and add `$ROBO_ROOT` to your $PATH for access to the pyenv command-line utility.
+2. Define the environment variable `ROBO_ROOT` to point to the path where the repo is cloned and add `$ROBO_ROOT` to your `PATH`:
 
   ```
   $ echo 'export ROBO_ROOT="$HOME/robocode"' >> ~/.bashrc 
@@ -39,11 +39,15 @@ To build the project you'll require `maven` and to run [Robocode-docker](https:/
   $ robo
   ```
 
-And that's it!
+And that's it! 
+
+> **Note:** if done properly, the sample robot `robots.first.MyFirstRobot` should be available. Otherwise, go through the installation steps again carefuly, either the maven build failed or you have set an environment variable incorrectly.
   
 ## Developing robots
 
-Simply add the repository to your favorite IDE as a Maven Project. Now make sure that every robot is added under the `robots` package, within the `$ROBO_ROOT/src/main/java/robots` folder. Feel free to add subpackages though, e.g. `robots.myrobot` at `$ROBO_ROOT/src/main/java/robots/myrobots`.
+Simply add the installation folder to your favorite IDE as a Maven Project! 
+
+Make sure that every new robot you develop is added under the `robots` package, within the `$ROBO_ROOT/src/main/java/robots` folder (their `.class` files will then be under `$ROBO_ROOT/target/classes/robots`, which is where Robocode reads them from). Feel free to add subpackages, e.g. `robots.mybots` at `$ROBO_ROOT/src/main/java/robots/mybots`.
 
 To build your robots run Maven on the root of the installation folder:
 
@@ -51,7 +55,7 @@ To build your robots run Maven on the root of the installation folder:
 $ cd $ROBO_ROOT && mvn clean install
 ```
 
-They will then become instantly available on Robocode (even if it is already running) under the `robots.*` package.
+They will become instantly available on Robocode under the `robots.*` package (you might have to refresh the robot list in the `New Battle` view with `CTRL+R`)
 
 > **Note:** you *can* use Robocode's functional, yet limited, IDE to develop your robots, even as it's running on a container. However it will be hard to retrieve them at the host machine later, so it's not recommended. Besides, if you're ok using Robocode's IDE, why'd you download this framework?
 
